@@ -26,8 +26,8 @@ const About = () => {
     {
       name: "Vishnu Jain",
       title: "Technology & Energy Expert",
-      experience: "IIT Roorkee Graduate",
-      bio: "Data Engineer"
+      experience: "IIT Roorkee Graduate, Data Engineer",
+      bio: " Drives GreenIntel’s tech edge by integrating advanced AI solutions into renewable energy systems, enabling smarter, data-powered sustainability."
     }
   ];
   
@@ -146,13 +146,13 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 item-center">
             {team.map((member, index) => (
               <div key={index} className="bg-white border border-muted rounded-xl p-6 shadow-md">
                 <h3 className="text-xl text-black font-bold mb-6">{member.name}</h3>
                 <p className="text-greenintel-primary font-medium mb-2">{member.title}</p>
                 <p className="text-sm text-muted-foreground mb-2">{member.experience}</p>
-                <p>{member.bio}</p>
+                <p className="text-black">{member.bio}</p>
               </div>
             ))}
           </div>
