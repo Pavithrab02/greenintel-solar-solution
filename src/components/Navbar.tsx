@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -29,9 +28,13 @@ const Navbar = () => {
   return (
     <nav className="bg-background border-b border-muted/50 sticky top-0 z-40 backdrop-blur-lg">
       <div className="container-custom flex items-center justify-between py-4">
+        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <span className="bg-greenintel-primary text-white font-bold p-2 rounded-md">GI</span>
-          <span className="font-display font-bold text-xl text-greenintel-primary">GreenIntel</span>
+          <img 
+            src="resources\greenIntelenergy.png"  // Ensure this path is correct and points to the transparent logo
+            alt="GreenIntel Logo"
+            className=" max-h-16 w-auto bg-transparent" // Adjust size as needed
+          />
         </Link>
 
         {/* Desktop Navigation */}

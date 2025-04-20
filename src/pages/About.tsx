@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Award, CheckCircle, Target, Heart, Flower } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,22 +9,25 @@ const About = () => {
       name: "Sarvesh Mall",
       title: "Renewable Energy Specialist",
       experience: "11+ years, MNRE background",
-      image: "/placeholder.svg",
       bio: "Expert in solar policy and implementation with extensive experience working with the Ministry of New and Renewable Energy."
     },
     {
       name: "Chetan Sharma",
       title: "Data & Sustainability Strategist",
       experience: "Environmental Engineering + Software",
-      image: "/placeholder.svg",
       bio: "Combines environmental engineering expertise with advanced software skills to deliver data-driven sustainability solutions."
     },
     {
       name: "Prem Bharti",
       title: "Solar EPC Trainer & Implementer",
       experience: "10+ years",
-      image: "/placeholder.svg",
       bio: "Seasoned professional in solar EPC project management, specializing in training teams and implementing efficient solar installations."
+    },
+    {
+      name: "Vishnu Jain",
+      title: "Technology & Energy Expert",
+      experience: "IIT Roorkee Graduate",
+      bio: "Data Engineer"
     }
   ];
   
@@ -146,20 +148,11 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <div key={index} className="bg-white border border-muted rounded-xl overflow-hidden shadow-md card-hover">
-                <div className="aspect-[4/3] bg-muted">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-greenintel-primary font-medium mb-2">{member.title}</p>
-                  <p className="text-sm text-muted-foreground mb-4">{member.experience}</p>
-                  <p>{member.bio}</p>
-                </div>
+              <div key={index} className="bg-white border border-muted rounded-xl p-6 shadow-md">
+                <h3 className="text-xl text-black font-bold mb-6">{member.name}</h3>
+                <p className="text-greenintel-primary font-medium mb-2">{member.title}</p>
+                <p className="text-sm text-muted-foreground mb-2">{member.experience}</p>
+                <p>{member.bio}</p>
               </div>
             ))}
           </div>

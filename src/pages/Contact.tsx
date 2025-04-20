@@ -52,19 +52,19 @@ const Contact = () => {
     {
       icon: <Phone size={24} className="text-greenintel-primary" />,
       title: "Phone",
-      details: "+91-800-123-4567",
-      link: "tel:+918001234567"
+      details: "+91-907-937-0323",
+      link: "tel:+919079370323"
     },
     {
       icon: <Mail size={24} className="text-greenintel-primary" />,
       title: "Email",
-      details: "info@greenintel.com",
-      link: "mailto:info@greenintel.com"
+      details: "admin@greenintel.in",
+      link: "mailto:admin@greenintel.in"
     },
     {
       icon: <MapPin size={24} className="text-greenintel-primary" />,
       title: "Office",
-      details: "123 Green Street, Tech Park, Bangalore 560001",
+      details: "Greater Noida, Gautam Buddha Nagar, 201318, India",
       link: "https://maps.google.com"
     }
   ];
@@ -140,7 +140,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium mb-2">
                           Phone Number
@@ -205,7 +205,7 @@ const Contact = () => {
               <Card className="border-none shadow-md overflow-hidden">
                 <CardContent className="p-0">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.66087865437!2d77.35073846060442!3d12.954334865560956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1636529582320!5m2!1sen!2sin"
+                    src="https://www.google.com/maps?q=Greater+Noida,+Gautam+Buddha+Nagar,+201318&output=embed"
                     width="100%"
                     height="250"
                     style={{ border: 0 }}
@@ -216,19 +216,19 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <div className="bg-white rounded-xl shadow-md p-8">
-                <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-                <div className="space-y-6">
+              <div className="bg-white rounded-lg shadow-md pt-0 px-4 pb-4 ">
+                <h3 className="text-xl font-bold mb-0">Contact Information</h3>
+                <div className="space-y-3">
                   {contactInfo.map((info, index) => (
-                    <div key={index} className="flex space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-greenintel-light rounded-full flex items-center justify-center">
+                    <div key={index} className="flex items-center space-x-4  ">
+                      <div className="flex items-center justify-center w-10 h-10 bg-greenintel-light rounded-full  relative top-[15px]">
                         {info.icon}
                       </div>
-                      <div>
-                        <h4 className="font-medium">{info.title}</h4>
+                      <div className="flex flex-col justify-center">
+                        <h4 className="font-medium leading-tight">{info.title}</h4>
                         <a 
                           href={info.link} 
-                          className="text-muted-foreground hover:text-greenintel-primary transition-colors"
+                          className="text-muted-foreground hover:text-greenintel-primary transition-colors text-sm"
                         >
                           {info.details}
                         </a>
