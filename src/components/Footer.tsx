@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               {/* Logo in the Footer */}
               <img
-                src="resources\greenintel.png"  // Ensure this path points to the transparent PNG logo
+                src="public\greenintel.png"  // Ensure this path points to the transparent PNG logo
                 alt="GreenIntel Logo"
                 className="logo max-h-16 w-auto" // Logo styling
               />
