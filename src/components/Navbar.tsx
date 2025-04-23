@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
+import grennintel from './greenintel.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="dist\assets\greenintel.png"  // Ensure this path is correct and points to the transparent logo
+            src={grennintel} // Ensure this path is correct and points to the transparent logo
             alt="GreenIntel Logo"
             className=" max-h-10 w-auto bg-transparent" // Adjust size as needed
           />

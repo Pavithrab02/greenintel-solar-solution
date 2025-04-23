@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import grennintel from './greenintel.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -30,7 +31,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               {/* Logo in the Footer */}
               <img
-                src="dist\assets\greenintel.png"  // Ensure this path points to the transparent PNG logo
+                src={grennintel} // Ensure this path points to the transparent PNG logo
                 alt="GreenIntel Logo"
                 className="logo max-h-16 w-auto" // Logo styling
               />
